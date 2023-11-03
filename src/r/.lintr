@@ -1,0 +1,7 @@
+linters: linters_with_defaults(
+    trailing_whitespace_linter = trailing_whitespace_linter(
+        allow_empty_lines = TRUE
+    ),
+    line_length_linter = line_length_linter(100)
+  )
+encoding: "UTF-8"

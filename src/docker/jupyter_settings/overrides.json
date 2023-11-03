@@ -1,0 +1,40 @@
+{
+  "@jupyterlab/apputils-extension:themes": {
+    "theme": "JupyterLab Dark"
+  },
+  "@jupyterlab/console-extension:tracker": {
+    "promptCellConfig": {
+      "tabSize": 2,
+      "wordWrapColumn": 100
+    }
+  },
+  "@jupyterlab/notebook-extension:tracker": {
+    "codeCellConfig": {
+      "tabSize": 2,
+      "wordWrapColumn": 100,
+      "showTrailingSpace": true    
+    },
+    "kernelShutdown": true,
+    "markdownCellConfig": {
+      "tabSize": 2,
+      "wordWrapColumn": 100
+    },
+    "rawCellConfig": {
+      "tabSize": 2,
+      "wordWrapColumn": 100,
+      "showTrailingSpace": true    
+    }
+  },
+  "@jupyterlab/toc-extension:plugin": {
+    "includeOutput": false,
+    "numberingH1": false
+  },
+  "@jupyterlab/terminal-extension:plugin": {
+    "shutdownOnClose": true
+  },
+  "@jupyterlab/fileeditor-extension:plugin": {
+    "tabSize": 2,
+    "wordWrapColumn": 100,
+    "showTrailingSpace": true    
+  }
+}
