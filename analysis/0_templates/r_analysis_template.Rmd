@@ -1,0 +1,82 @@
+---
+title: "R_markdown_template"
+author: "Kevin Liao"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+#knitr::opts_knit$set(root.dir = '../../') #Set working directory
+
+# Include here all the packages that are needed for the analysis
+library_list <- c(
+  ""
+)
+for (package in library_list) {
+  library(package, character.only = T, quietly = T)
+}
+
+#Set options
+options(stringsAsFactors = F)
+options(repr.plot.res = 0.25) #plot resolution can have a big impact on notebook size
+
+#Set dir paths for results from analysis. Makes easier to specify output paths 
+results_dir <- ""
+figure_dir <- file.path(results_dir, "figures"); print(figure_dir)
+table_dir <- file.path(results_dir, "tables"); print(table_dir)
+serialized_dir <- file.path(results_dir, "serialized"); print(serialized_dir)
+```
+
+```{r functions, echo=FALSE}
+# Include here any reusable functions that may not (yet) warrant being included as a generalized
+# function in src/r/. Follow roxygen2 syntax for code documentation for functions:
+# https://roxygen2.r-lib.org/articles/rd.html
+# A template function is included here for your convenience.
+
+#' @title
+#' Function title
+#'
+#' @description
+#' Brief function description.
+#'
+#' @details
+#' Function details.
+#'
+#' @param bar A . Description of the function argument.
+#'
+#' @returns Description of what the function returns.
+#'
+#' @examples
+#' Put executable R code here that demonstrates how the function works.
+#' Code must run without error.
+foo <- function(bar) {
+  return 
+}
+```
+
+```{r, echo=FALSE}
+# Include here any global variables for easy reference throughout the notebook. Examples include
+# color palettes, plot specifications, variable thresholds/cutoffs, etc.
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+
+
